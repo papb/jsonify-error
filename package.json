@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/papb/jsonify-error.git"
   },
+  "scripts": {
+    "make_browser": "browserify make_browser.js -o browser.js"
+  },
   "keywords": [
     "error",
     "wrap",
