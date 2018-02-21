@@ -1,0 +1,25 @@
+{
+  "name": "jsonify-error",
+  "version": "1.0.0",
+  "description": "None yet",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papb/jsonify-error.git"
+  },
+  "keywords": [
+    "error",
+    "wrap",
+    "wrapper",
+    "log",
+    "json",
+    "jsonify",
+    "better"
+  ],
+  "author": "Pedro Augusto de Paula Barbosa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/papb/jsonify-error/issues"
+  },
+  "homepage": "https://github.com/papb/jsonify-error#readme"
+}
