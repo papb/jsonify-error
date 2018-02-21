@@ -1,5 +1,6 @@
 "use strict";
-module.exports = function(error) {
+
+function jsonifyError(error) {
     var superclasses = [];
     var temp = Object.getPrototypeOf(Object.getPrototypeOf(error));
     while (temp !== null) {
@@ -16,14 +17,19 @@ module.exports = function(error) {
     }
     wrappedError.stack = error.stack.split('\n').map(x => x.replace(/^\s+/, ""));
     return wrappedError;
-};
+}
+
 function mapArgs(args) {
     return args.map(arg => {
         if (arg instanceof Error) return module.exports(arg);
         return arg;
     });
 }
-module.exports.overrideConsole = function() {
+
+var alreadyOverridden = false;
+jsonifyError.overrideConsole = function() {
+    if (alreadyOverridden) return;
+    alreadyOverridden = true;
     var defaultConsoleLog = console.log;
     var defaultConsoleWarn = console.warn;
     var defaultConsoleError = console.error;
@@ -36,4 +42,6 @@ module.exports.overrideConsole = function() {
     console.error = function(...args) {
         defaultConsoleError.apply(null, mapArgs(args));
     };
-}
+};
+
+module.exports = jsonifyError;
