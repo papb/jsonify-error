@@ -36,8 +36,8 @@ The resulting plain object has the form:
     "name": "TypeError",
     "message": "It can't be a string",
     "superclasses": ["Error", "Object"],
-    // If the error has other fields they appear here (including in the prototype chain):
     "enumerableFields": {
+        // If the error has other fields they appear here (including in the prototype chain):
         "someField": "someValue"
     },
     "stack": [
