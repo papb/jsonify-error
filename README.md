@@ -96,6 +96,16 @@ app.get('/your/api', (req, res) => {
 });
 ```
 
+# Example usage: overriding console.error
+
+```javascript
+require("jsonify-error").overrideConsoleError();
+// Now console.error automatically calls jsonifyError() if
+// the argument(s) is(are) instanceof Error.
+// Note: overriding native functions/objects is usually not
+// a good practice so use this with caution.
+```
+
 # Contributing
 
 Any contribution is very welcome. Feel free to open an issue about anything: questions, suggestions, feature requests, bugs, improvements, mistakes, whatever. I will be always looking.

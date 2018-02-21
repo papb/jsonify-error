@@ -17,3 +17,12 @@ module.exports = function(error) {
     wrappedError.stack = error.stack.split('\n').map(x => x.replace(/^\s+/, ""));
     return wrappedError;
 };
+module.exports.overrideConsoleError = function() {
+    var defaultConsoleError = console.error;
+    console.error = function(...args) {
+        defaultConsoleError.apply(null, args.map(arg => {
+            if (arg instanceof Error) return module.exports(arg);
+            return arg;
+        }));
+    };
+}
