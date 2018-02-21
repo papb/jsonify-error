@@ -96,7 +96,7 @@ app.get('/your/api', (req, res) => {
 });
 ```
 
-# Example usage: overriding console.error
+# Example usage: overriding console
 
 ```javascript
 require("jsonify-error").overrideConsole();
