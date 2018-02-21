@@ -17,12 +17,23 @@ module.exports = function(error) {
     wrappedError.stack = error.stack.split('\n').map(x => x.replace(/^\s+/, ""));
     return wrappedError;
 };
-module.exports.overrideConsoleError = function() {
+function mapArgs(args) {
+    return args.map(arg => {
+        if (arg instanceof Error) return module.exports(arg);
+        return arg;
+    });
+}
+module.exports.overrideConsole = function() {
+    var defaultConsoleLog = console.log;
+    var defaultConsoleWarn = console.warn;
     var defaultConsoleError = console.error;
+    console.log = function(...args) {
+        defaultConsoleLog.apply(null, mapArgs(args));
+    };
+    console.warn = function(...args) {
+        defaultConsoleWarn.apply(null, mapArgs(args));
+    };
     console.error = function(...args) {
-        defaultConsoleError.apply(null, args.map(arg => {
-            if (arg instanceof Error) return module.exports(arg);
-            return arg;
-        }));
+        defaultConsoleError.apply(null, mapArgs(args));
     };
 }
