@@ -21,7 +21,40 @@ For browsers, simply include browser.js in your entry point:
 <script src="https://rawgit.com/papb/jsonify-error/1.0.0/browser.js"></script>
 ```
 
-In node, simply `npm install --save jsonify-error`.
+In node, as usual, simply do:
+
+```
+npm install --save jsonify-error
+```
+
+# Example result
+
+The resulting plain object has the form:
+
+```javascript
+{
+    "name": "TypeError",
+    "message": "It can't be a string",
+    "superclasses": ["Error", "Object"],
+    // If the error has other fields they appear here (including in the prototype chain):
+    "enumerableFields": {
+        "someField": "someValue"
+    },
+    "stack": [
+        "TypeError: It can't be a string", 
+        "at z (E:\\test.js:15:15)", 
+        "at E:\\test.js:10:9", 
+        "at Array.forEach (native)", 
+        "at y (E:\\test.js:9:13)", 
+        "at x (E:\\test.js:5:5)", 
+        "at w (E:\\test.js:24:9)", 
+        "at Object.<anonymous> (E:\\test.js:32:1)", 
+        "at Module._compile (module.js:570:32)", 
+        "at Object.Module._extensions..js (module.js:579:10)", 
+        "at Module.load (module.js:487:32)"
+    ]
+}
+```
 
 # Example usage: try-catch
 
@@ -38,7 +71,7 @@ try {
 
 # Example usage: promises
 
-For better error logs of unhandled errors in promises, the recommended solution is to **use the sibling module, [better-promise-error-log](better-promise-error-log)**. But if you insist, you can do:
+For better error logs of unhandled errors in promises, the recommended solution is to **use the sibling module, [better-promise-error-log][better-promise-error-log]**. But if you insist, you can do:
 
 ```javascript
 var jsonifyError = require("jsonify-error");
