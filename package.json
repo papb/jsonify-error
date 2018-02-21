@@ -1,7 +1,7 @@
 {
   "name": "jsonify-error",
   "version": "1.0.0",
-  "description": "None yet",
+  "description": "Get a plain object fully representing the error for better logs and server responses.",
   "main": "index.js",
   "repository": {
     "type": "git",
