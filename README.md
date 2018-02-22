@@ -18,7 +18,7 @@ With **jsonify-error**, use `jsonifyError(x)` instead of `x`. It produces a plai
 For browsers, simply include browser.js in your entry point:
 
 ```html
-<script src="https://rawgit.com/papb/jsonify-error/1.1.0/browser.js" integrity="sha384-OP9ezJvZ76f15Peimd7ytooizwOs3thcuSX5kOzC+lAh94CA8G3PRrP8DnXf4Ch8" crossorigin="anonymous"></script>
+<script src="https://rawgit.com/papb/jsonify-error/1.1.1/browser.js" integrity="sha384-OP9ezJvZ76f15Peimd7ytooizwOs3thcuSX5kOzC+lAh94CA8G3PRrP8DnXf4Ch8" crossorigin="anonymous"></script>
 ```
 
 In node, as usual, simply do:
