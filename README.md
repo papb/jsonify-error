@@ -3,23 +3,35 @@ jsonify-error
 
 [![npm package](https://nodei.co/npm/jsonify-error.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jsonify-error/)
 
-[![NPM version][npm-version-image]][npm-url]
-[![Dependency Status](https://david-dm.org/papb/jsonify-error.svg)](https://david-dm.org/papb/jsonify-error)
-[![MIT License][license-image]][license-url]
-[![NPM downloads][npm-downloads-image]][npm-url]
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/papb/jsonify-error/issues)
+[![NPM version][npm-version-badge]][npm-url]
+[![License][license-badge]][license-url]
+[![NPM downloads][npm-downloads-badge]][npm-url]
+[![Dependency Status][dependency-status-badge]](https://david-dm.org/papb/jsonify-error)
+[![Dev Dependency Status][dev-dependency-status-badge]](https://david-dm.org/papb/jsonify-error)
+[![contributions welcome][contrib-welcome-badge]](https://github.com/papb/jsonify-error/issues)
 
-It's 2018 and neither `JSON.stringify(x)` nor `console.log(x)` behave as nicely as they could when `x` is an error.
+It's 2018 and neither `JSON.stringify(e)` nor `console.log(e)` behave as nicely as they could when `e` is an error.
 
-With **jsonify-error**, use `jsonifyError(x)` instead of `x`. It produces a plain object with everything one could wish to see about an error.
+With **jsonify-error**, use `jsonifyError(e)` instead of `e`. It produces a plain object with everything one could wish to see about an error.
 
 # Installation
 
-For browsers, simply include browser.js in your entry point:
+## In Browsers
+
+For browsers, simply include one of the dists in your entry point, such as `dist/jsonify-error.js`:
 
 ```html
-<script src="https://rawgit.com/papb/jsonify-error/1.1.1/browser.js" integrity="sha384-OP9ezJvZ76f15Peimd7ytooizwOs3thcuSX5kOzC+lAh94CA8G3PRrP8DnXf4Ch8" crossorigin="anonymous"></script>
+<script src="https://rawgit.com/papb/jsonify-error/1.1.2/dist/jsonify-error.js" integrity="sha384-rUJqVIJ9yTjx2QW03SzS3uxW2wPyXET6UMl7Wm6/jFeHbEIJ3xEudBqnLekQVFRi" crossorigin="anonymous"></script>
 ```
+
+The following dists are available:
+
+* `dist/jsonify-error.js`
+* `dist/jsonify-error.min.js`
+* `dist/jsonify-error.es5.js`
+* `dist/jsonify-error.es5.min.js`
+
+## In Node
 
 In node, as usual, simply do:
 
@@ -115,10 +127,12 @@ Any contribution is very welcome. Feel free to open an issue about anything: que
 MIT (c) Pedro Augusto de Paula Barbosa
 
 [npm-url]: https://npmjs.org/package/jsonify-error
-[npm-version-image]: https://img.shields.io/npm/v/jsonify-error.svg
-[npm-downloads-image]: https://img.shields.io/npm/dt/jsonify-error.svg
+[npm-version-badge]: https://badgen.net/npm/v/jsonify-error
+[dependency-status-badge]: https://badgen.net/david/dep/papb/jsonify-error
+[dev-dependency-status-badge]: https://badgen.net/david/dev/papb/jsonify-error
+[npm-downloads-badge]: https://badgen.net/npm/dt/jsonify-error
+[contrib-welcome-badge]: https://badgen.net/badge/contributions/welcome/green
+[license-badge]: https://badgen.net/npm/license/jsonify-error
 
-[license-image]: http://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: LICENSE
-
 [better-promise-error-log]: https://npmjs.org/package/better-promise-error-log
