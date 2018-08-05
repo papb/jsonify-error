@@ -6,10 +6,6 @@ module.exports = exports = {
 
     "extends": "eslint:recommended",
 
-    "globals": {
-        "window": true
-    },
-
     "rules": {
         "no-console": "off",
         "no-unused-vars": "off",
