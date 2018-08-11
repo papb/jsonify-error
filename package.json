@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "description": "Get a plain object fully representing the error for better logs and server responses.",
   "main": "index.js",
+  "browser": "dist/jsonify-error.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/papb/jsonify-error.git"
@@ -17,6 +18,7 @@
     "lint": "eslint ."
   },
   "files": [
+    "dist",
     "index.js",
     "browser-entrypoint.js"
   ],
