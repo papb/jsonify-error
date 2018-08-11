@@ -22,7 +22,7 @@ function jsonifyError(error) {
     for (let x in error) {
         wrappedError.enumerableFields[x] = error[x];
     }
-    if (typeof error.stack === "string") {
+    if (typeof error.stack === "string" && error.stack.length > 0) {
         wrappedError.stack = error.stack.split('\n').map(x => x.replace(/^\s+/, ""));
     } else {
         wrappedError.stack = error.stack || "<no stack trace available>";
