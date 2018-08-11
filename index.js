@@ -12,6 +12,7 @@ function getSuperclasses(obj) {
 }
 
 function jsonifyError(error) {
+    if (!(error instanceof Error)) return error;
     const wrappedError = {};
     wrappedError.name = error.name || "<no name available>";
     wrappedError.message = error.message || "<no message available>";
