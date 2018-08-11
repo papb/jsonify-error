@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- ## [Unreleased] -->
 
+## [1.2.0] - 2018-08-11
+### Added
+- Source maps for all dists (#2)
+- Property `.className` in the json output (from `error.constructor.name`)
+- Dists are included in npm distribution now (with a `"browser"` entry on `package.json`)
+
+### Changed
+- Improved `<no stack trace available>` output (#3)
+- It is now transparent to non-errors (#1)
+
 ## [1.1.2] - 2018-08-04
 ### Added
 - Multiple dists available for browsers (es6, es5, and minified).
@@ -21,6 +31,7 @@ Note: 1.1.0 was skipped because of a mistake.
 
 - Initial version.
 
-[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.1.2...HEAD
+[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/papb/jsonify-error/compare/v1.1.2...v1.2.0
 [1.1.2]: https://github.com/papb/jsonify-error/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/papb/jsonify-error/compare/v1.0.0...v1.1.1

@@ -21,10 +21,10 @@ With **jsonify-error**, use `jsonifyError(e)` instead of `e`. It produces a plai
 For browsers, simply include one of the dists in your entry point, such as `dist/jsonify-error.js`:
 
 ```html
-<script src="https://rawgit.com/papb/jsonify-error/1.1.2/dist/jsonify-error.js" integrity="sha384-rUJqVIJ9yTjx2QW03SzS3uxW2wPyXET6UMl7Wm6/jFeHbEIJ3xEudBqnLekQVFRi" crossorigin="anonymous"></script>
+<script src="https://rawgit.com/papb/jsonify-error/1.2.0/dist/jsonify-error.js" integrity="sha384-k2RD7Ck9pL0UdHYGtnrPC014SjdObcGt9D5LP/CAqFdwee9qcTYt0BzTCiI8PGFn" crossorigin="anonymous"></script>
 ```
 
-The following dists are available:
+The following dists are available (with source maps):
 
 * `dist/jsonify-error.js`
 * `dist/jsonify-error.min.js`
@@ -46,6 +46,7 @@ The resulting plain object has the form:
 ```javascript
 {
     "name": "TypeError",
+    "className": "TypeError",
     "message": "It can't be a string",
     "superclasses": ["Error", "Object"],
     "enumerableFields": {
@@ -117,6 +118,8 @@ require("jsonify-error").overrideConsole();
 // before logging. Note that overriding native functions/objects
 // is usually not a good practice so use this with caution.
 ```
+
+*Note:* since 1.2.0, you can simply `console.log(jsonifyError(anything))` if you prefer, because if `anything` is not an error, `jsonifyError` will not touch it at all.
 
 # Contributing
 
