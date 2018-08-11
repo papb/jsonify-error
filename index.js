@@ -1,17 +1,21 @@
 "use strict";
 
-function jsonifyError(error) {
-    var superclasses = [];
-    var temp = Object.getPrototypeOf(error);
+function getSuperclasses(obj) {
+    const superclasses = [];
+    let temp = Object.getPrototypeOf(obj);
     if (temp !== null) temp = Object.getPrototypeOf(temp);
     while (temp !== null) {
         superclasses.push(temp.constructor.name);
         temp = Object.getPrototypeOf(temp);
     }
-    var wrappedError = {};
+    return superclasses;
+}
+
+function jsonifyError(error) {
+    const wrappedError = {};
     wrappedError.name = error.name || "<no name available>";
     wrappedError.message = error.message || "<no message available>";
-    wrappedError.superclasses = superclasses;
+    wrappedError.superclasses = getSuperclasses(error);
     wrappedError.enumerableFields = {};
     for (let x in error) {
         wrappedError.enumerableFields[x] = error[x];
@@ -25,27 +29,24 @@ function jsonifyError(error) {
 }
 
 function mapArgs(args) {
-    return args.map(arg => {
-        if (arg instanceof Error) return module.exports(arg);
-        return arg;
-    });
+    return args.map(arg => arg instanceof Error ? jsonifyError(arg) : arg);
 }
 
-var alreadyOverridden = false;
+let alreadyOverridden = false;
 jsonifyError.overrideConsole = function() {
     if (alreadyOverridden) return;
     alreadyOverridden = true;
-    var defaultConsoleLog = console.log;
-    var defaultConsoleWarn = console.warn;
-    var defaultConsoleError = console.error;
+    const defaultConsoleLog = console.log.bind(console);
+    const defaultConsoleWarn = console.warn.bind(console);
+    const defaultConsoleError = console.error.bind(console);
     console.log = function(...args) {
-        defaultConsoleLog.apply(null, mapArgs(args));
+        defaultConsoleLog(...mapArgs(args));
     };
     console.warn = function(...args) {
-        defaultConsoleWarn.apply(null, mapArgs(args));
+        defaultConsoleWarn(...mapArgs(args));
     };
     console.error = function(...args) {
-        defaultConsoleError.apply(null, mapArgs(args));
+        defaultConsoleError(...mapArgs(args));
     };
 };
 
