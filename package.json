@@ -8,17 +8,17 @@
     "url": "git+https://github.com/papb/jsonify-error.git"
   },
   "scripts": {
-    "build-dev-es6-watch": "watchify make_browser.js --outfile=\"dist/jsonify-error.js\" --verbose --debug",
-    "build-dev-es6": "browserify --debug make_browser.js -o dist/jsonify-error.js",
+    "build-dev-es6-watch": "watchify browser-entrypoint.js --outfile=\"dist/jsonify-error.js\" --verbose --debug",
+    "build-dev-es6": "browserify --debug browser-entrypoint.js -o dist/jsonify-error.js",
     "build-es6": "npm run build-dev-es6 && uglifyjs dist/jsonify-error.js --compress --mangle -o dist/jsonify-error.min.js",
-    "build-dev-es5": "browserify make_browser.js -o dist/jsonify-error.es5.js -t [ babelify --presets [ \"babel-preset-env\" ] ]",
+    "build-dev-es5": "browserify browser-entrypoint.js -o dist/jsonify-error.es5.js -t [ babelify --presets [ \"babel-preset-env\" ] ]",
     "build-es5": "npm run build-dev-es5 && uglifyjs dist/jsonify-error.es5.js --compress --mangle -o dist/jsonify-error.es5.min.js",
     "build": "npm run build-es6 && npm run build-es5",
     "lint": "eslint ."
   },
   "files": [
     "index.js",
-    "make_browser.js"
+    "browser-entrypoint.js"
   ],
   "keywords": [
     "error",
