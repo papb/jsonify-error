@@ -9,6 +9,7 @@ jsonify-error
 [![Dependency Status][dependency-status-badge]](https://david-dm.org/papb/jsonify-error)
 [![Dev Dependency Status][dev-dependency-status-badge]](https://david-dm.org/papb/jsonify-error)
 [![contributions welcome][contrib-welcome-badge]](https://github.com/papb/jsonify-error/issues)
+[![jsDelivr hits][jsdelivr-badge]](https://www.jsdelivr.com/package/npm/jsonify-error)
 
 It's 2018 and neither `JSON.stringify(e)` nor `console.log(e)` behave as nicely as they could when `e` is an error.
 
@@ -18,10 +19,10 @@ With **jsonify-error**, use `jsonifyError(e)` instead of `e`. It produces a plai
 
 ## In Browsers
 
-For browsers, simply include one of the dists in your entry point, such as `dist/jsonify-error.js`:
+For browsers, simply include one of the dists in your entry point, such as `dist/jsonify-error.js`. The dists are available in [jsDelivr](https://cdn.jsdelivr.net/npm/jsonify-error/):
 
 ```html
-<script src="https://rawgit.com/papb/jsonify-error/1.2.0/dist/jsonify-error.js" integrity="sha384-k2RD7Ck9pL0UdHYGtnrPC014SjdObcGt9D5LP/CAqFdwee9qcTYt0BzTCiI8PGFn" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsonify-error@1.2.1/dist/jsonify-error.js" integrity="sha384-k2RD7Ck9pL0UdHYGtnrPC014SjdObcGt9D5LP/CAqFdwee9qcTYt0BzTCiI8PGFn" crossorigin="anonymous"></script>
 ```
 
 The following dists are available (with source maps):
@@ -136,6 +137,7 @@ MIT (c) Pedro Augusto de Paula Barbosa
 [npm-downloads-badge]: https://badgen.net/npm/dt/jsonify-error
 [contrib-welcome-badge]: https://badgen.net/badge/contributions/welcome/green
 [license-badge]: https://badgen.net/npm/license/jsonify-error
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/jsonify-error/badge?style=rounded
 
 [license-url]: LICENSE
 [better-promise-error-log]: https://npmjs.org/package/better-promise-error-log

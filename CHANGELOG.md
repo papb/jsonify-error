@@ -6,15 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- ## [Unreleased] -->
 
+## [1.2.1] - 2018-08-11
+### Changed
+- `jsDelivr` is now suggested in readme instead of `rawgit`
+- Fixed issue links in changelog
+- (nothing changed in the code itself)
+
 ## [1.2.0] - 2018-08-11
 ### Added
-- Source maps for all dists (#2)
+- Source maps for all dists ([#2](https://github.com/papb/jsonify-error/issues/2))
 - Property `.className` in the json output (from `error.constructor.name`)
 - Dists are included in npm distribution now (with a `"browser"` entry on `package.json`)
 
 ### Changed
-- Improved `<no stack trace available>` output (#3)
-- It is now transparent to non-errors (#1)
+- Improved `<no stack trace available>` output ([#3](https://github.com/papb/jsonify-error/issues/3))
+- It is now transparent to non-errors ([#1](https://github.com/papb/jsonify-error/issues/1))
 
 ## [1.1.2] - 2018-08-04
 ### Added
@@ -31,7 +37,8 @@ Note: 1.1.0 was skipped because of a mistake.
 
 - Initial version.
 
-[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.2.1...HEAD
+[1.2.0]: https://github.com/papb/jsonify-error/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/papb/jsonify-error/compare/v1.1.2...v1.2.0
 [1.1.2]: https://github.com/papb/jsonify-error/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/papb/jsonify-error/compare/v1.0.0...v1.1.1
