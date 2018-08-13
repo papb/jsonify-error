@@ -1,6 +1,6 @@
 {
   "name": "jsonify-error",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Get a plain object fully representing the error for better logs and server responses.",
   "main": "index.js",
   "browser": "browser-entrypoint.js",
