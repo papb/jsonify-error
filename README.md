@@ -8,6 +8,8 @@ jsonify-error
 [![NPM downloads][npm-downloads-badge]][npm-url]
 [![Dependency Status][dependency-status-badge]](https://david-dm.org/papb/jsonify-error)
 [![Dev Dependency Status][dev-dependency-status-badge]](https://david-dm.org/papb/jsonify-error)
+[![Open Issues][open-issues-badge]](https://github.com/papb/jsonify-error/issues)
+[![Closed Issues][closed-issues-badge]](https://github.com/papb/jsonify-error/issues?q=is%3Aissue+is%3Aclosed)
 [![contributions welcome][contrib-welcome-badge]](https://github.com/papb/jsonify-error/issues)
 [![jsDelivr hits][jsdelivr-badge]](https://www.jsdelivr.com/package/npm/jsonify-error)
 
@@ -22,7 +24,7 @@ With **jsonify-error**, use `jsonifyError(e)` instead of `e`. It produces a plai
 For browsers, simply include one of the dists in your entry point, such as `dist/jsonify-error.js`. The dists are available in [jsDelivr](https://cdn.jsdelivr.net/npm/jsonify-error/):
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/jsonify-error@1.2.1/dist/jsonify-error.js" integrity="sha384-k2RD7Ck9pL0UdHYGtnrPC014SjdObcGt9D5LP/CAqFdwee9qcTYt0BzTCiI8PGFn" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsonify-error@1.2.2/dist/jsonify-error.js" integrity="sha384-IlFtQEeOfO1Uw6QCHwhpQFXZE7CghDHsPkCgjjHiMZmzEYBNQV3UmBpfulfxC/QJ" crossorigin="anonymous"></script>
 ```
 
 The following dists are available (with source maps):
@@ -126,6 +128,10 @@ require("jsonify-error").overrideConsole();
 
 Any contribution is very welcome. Feel free to open an issue about anything: questions, suggestions, feature requests, bugs, improvements, mistakes, whatever. I will be always looking.
 
+# Changelog
+
+The changelog is available in [CHANGELOG.md](CHANGELOG.md).
+
 # License
 
 MIT (c) Pedro Augusto de Paula Barbosa
@@ -135,6 +141,8 @@ MIT (c) Pedro Augusto de Paula Barbosa
 [dependency-status-badge]: https://badgen.net/david/dep/papb/jsonify-error
 [dev-dependency-status-badge]: https://badgen.net/david/dev/papb/jsonify-error
 [npm-downloads-badge]: https://badgen.net/npm/dt/jsonify-error
+[open-issues-badge]: https://badgen.net/github/open-issues/papb/jsonify-error
+[closed-issues-badge]: https://badgen.net/github/closed-issues/papb/jsonify-error
 [contrib-welcome-badge]: https://badgen.net/badge/contributions/welcome/green
 [license-badge]: https://badgen.net/npm/license/jsonify-error
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/jsonify-error/badge?style=rounded
