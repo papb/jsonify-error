@@ -24,7 +24,7 @@ With **jsonify-error**, use `jsonifyError(e)` instead of `e`. It produces a plai
 For browsers, simply include one of the dists in your entry point, such as `dist/jsonify-error.js`. The dists are available in [jsDelivr](https://cdn.jsdelivr.net/npm/jsonify-error/):
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/jsonify-error@1.2.2/dist/jsonify-error.js" integrity="sha384-IlFtQEeOfO1Uw6QCHwhpQFXZE7CghDHsPkCgjjHiMZmzEYBNQV3UmBpfulfxC/QJ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsonify-error@1.3.0/dist/jsonify-error.js" integrity="sha384-n9I+URPQ8PzrWft0T/DU2koP/WJ1R56t1OGcaWwUaBFrPLkH63jiI3P+vVolz14b" crossorigin="anonymous"></script>
 ```
 
 The following dists are available (with source maps):
