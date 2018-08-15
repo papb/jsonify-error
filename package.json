@@ -3,7 +3,6 @@
   "version": "1.2.2",
   "description": "Get a plain object fully representing the error for better logs and server responses.",
   "main": "index.js",
-  "browser": "browser-entrypoint.js",
   "jsdelivr": "dist/jsonify-error.js",
   "repository": {
     "type": "git",
