@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- ## [Unreleased] -->
 
+## [1.3.1] - 2018-08-15
+### Changed
+- Dev: fix dist line endings for SRI calculations ([#6](https://github.com/papb/jsonify-error/issues/6))
+
 ## [1.3.0] - 2018-08-15
 ### Added
 - Fixed wrong SRI hash in README.md (again, sorry!)
@@ -50,7 +54,8 @@ Note: 1.1.0 was skipped because of a mistake.
 
 - Initial version.
 
-[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.3.1...HEAD
+[1.3.1]: https://github.com/papb/jsonify-error/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/papb/jsonify-error/compare/v1.2.2...v1.3.0
 [1.2.2]: https://github.com/papb/jsonify-error/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/papb/jsonify-error/compare/v1.2.0...v1.2.1
