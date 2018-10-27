@@ -1,26 +1,26 @@
-module.exports = exports = {
+module.exports = {
     "env": {
         "es6": true,
         "node": true
     },
-
-    "extends": "eslint:recommended",
-
+    "plugins": ["node"],
+    "extends": ["eslint:recommended", "plugin:node/recommended"],
     "rules": {
-        "no-console": "off",
-        "no-unused-vars": "off",
         "eqeqeq": ["error", "always"],
-        "no-invalid-this": "error",
-        "no-loop-func": "error",
+        "no-console": "off",
+        "no-extra-semi": "error",
         "no-return-assign": "error",
         "no-throw-literal": "error",
         "no-unused-expressions": "error",
-        "no-warning-comments": [ "warn", {
+        "no-var": "error",
+        "no-warning-comments": [ "error", {
             "terms": [ "TODO", "FIXME" ],
-            "location": "start"
+            "location": "anywhere"
         }],
+        "prefer-const": "error",
+        "semi": ["error", "always"],
+        "strict": ["error", "global"],
         "wrap-iife": ["error", "inside", { "functionPrototypeMethods": true }],
-        "yoda": ["error", "never", { "exceptRange": true }],
-        "strict": ["error", "global"]
+        "node/exports-style": ["error", "module.exports"]
     }
 };

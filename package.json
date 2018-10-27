@@ -42,10 +42,14 @@
     "babelify": "^8.0.0",
     "browserify": "^16.2.2",
     "eslint": "^5.2.0",
+    "eslint-plugin-node": "^8.0.0",
     "fs-jetpack": "^2.1.0",
     "sha.js": "^2.4.11",
     "uglify-es": "^3.3.9",
     "watchify": "^3.11.0"
+  },
+  "engines": {
+    "node": ">=6"
   },
   "bugs": {
     "url": "https://github.com/papb/jsonify-error/issues"
