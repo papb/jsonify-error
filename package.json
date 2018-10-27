@@ -20,9 +20,10 @@
     "lint": "eslint ."
   },
   "files": [
+    "browser-entrypoint.js",
     "dist",
     "index.js",
-    "browser-entrypoint.js"
+    "lib"
   ],
   "keywords": [
     "error",
