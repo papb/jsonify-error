@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- ## [Unreleased] -->
 
+## [1.4.0] - 2018-10-27
+### Added
+- `jsonifyError.log(error)` function
+- `jsonifyError.overrideErrorMethods()` function (enabling powerful `.toJSON()` and `.toString()` methods on errors)
+- Dev: added node and browser tests (with Travis CI!)
+### Changed
+- Improved README
+- Dev: separate the library in multiple files
+
 ## [1.3.1] - 2018-08-15
 ### Changed
 - Dev: fix dist line endings for SRI calculations ([#6](https://github.com/papb/jsonify-error/issues/6))
@@ -54,7 +63,8 @@ Note: 1.1.0 was skipped because of a mistake.
 
 - Initial version.
 
-[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.3.1...HEAD
+[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/papb/jsonify-error/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/papb/jsonify-error/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/papb/jsonify-error/compare/v1.2.2...v1.3.0
 [1.2.2]: https://github.com/papb/jsonify-error/compare/v1.2.1...v1.2.2

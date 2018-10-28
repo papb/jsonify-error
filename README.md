@@ -4,6 +4,7 @@ jsonify-error
 [![npm package](https://nodei.co/npm/jsonify-error.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jsonify-error/)
 
 [![NPM version][npm-version-badge]][npm-url]
+[![Build status][build-status-badge]][travis-url]
 [![License][license-badge]][license-url]
 [![NPM downloads][npm-downloads-badge]][npm-url]
 [![Dependency Status][dependency-status-badge]](https://david-dm.org/papb/jsonify-error)
@@ -13,9 +14,21 @@ jsonify-error
 [![contributions welcome][contrib-welcome-badge]](https://github.com/papb/jsonify-error/issues)
 [![jsDelivr hits][jsdelivr-badge]](https://www.jsdelivr.com/package/npm/jsonify-error)
 
-It's 2018 and neither `JSON.stringify(e)` nor `console.log(e)` behave as nicely as they could when `e` is an error.
+Convert errors to JSON or to a good string. Develop faster with better error messages.
 
-With **jsonify-error**, use `jsonifyError(e)` instead of `e`. It produces a plain object with everything one could wish to see about an error.
+It's 2018 and still the default behavior of JavaScript could be better with regard to displaying errors:
+
+* `console.log(e)`: Bad
+* `JSON.stringify(e)`: Bad
+* `e.toString()`: Bad
+* `e.toJSON()`: Doesn't exist
+
+But **jsonify-error** comes to the rescue:
+
+* For `console.log(e)`: Use `jsonifyError.log(e)` instead (or call `jsonifyError.overrideConsole()` once and then `console.log(e)` will work too).
+* For `JSON.stringify(e)`: Use `JSON.stringify(jsonifyError(e))` instead (or call `jsonifyError.overrideErrorMethods()` once and then of `JSON.stringify(e)` will work too).
+* For `e.toString()`: Call `jsonifyError.overrideErrorMethods()` once and `e.toString()` will work.
+* For `e.toJSON()`: Use `jsonifyError(e)` instead (or call `jsonifyError.overrideErrorMethods()` once and `e.toJSON()` will work).
 
 # Installation
 
@@ -34,6 +47,8 @@ The following dists are available (with source maps):
 * `dist/jsonify-error.es5.js`
 * `dist/jsonify-error.es5.min.js`
 
+Or if you're developing a browser library with Browserify, you can just `require("jsonify-error")` normally.
+
 ## In Node
 
 In node, as usual, simply do:
@@ -42,9 +57,9 @@ In node, as usual, simply do:
 npm install --save jsonify-error
 ```
 
-# Example result
+# What it does
 
-The resulting plain object has the form:
+The main purpose of **jsonify-error**, as the name suggests, is to convert an error to a plain object. Just do `jsonifyError(e)` and you will get something like:
 
 ```javascript
 {
@@ -72,22 +87,27 @@ The resulting plain object has the form:
 }
 ```
 
-# Example usage: try-catch
+If you're thinking *"Great! Now I can do `console.log(jsonifyError(e))` instead of `console.log(e)`"*, you're in the right track, but you can do even better!
+A few utility methods are exposed by **jsonifyError** beyond the main one, as mentioned in the beginning of this README. 
+
+* `jsonifyError.log(e)`: Logs the error in a much better way than `console.log(e)`.
+* `jsonifyError.overrideConsole()`: Makes `console.log`, `console.warn`, `console.error` work like `jsonifyError.log` automatically. Calling this once is enough.
+* `jsonifyError.overrideErrorMethods()`: Heavily improves `e.toString()` and adds `e.toJSON()` to all errors automatically. Calling this once is enough.
+
+## Example: with try-catch blocks
 
 ```javascript
-var jsonifyError = require("jsonify-error");
+const jsonifyError = require("jsonify-error");
 
 try {
     // ...
 } catch (e) {
-    console.error(jsonifyError(e));
+    jsonifyError.log(e);
     process.exit(1);
 }
 ```
 
-# Example usage: promises
-
-For better error logs of unhandled errors in promises, the recommended solution is to **use the sibling module, [better-promise-error-log][better-promise-error-log]**. But if you insist, you can do:
+## Example: with promises
 
 ```javascript
 var jsonifyError = require("jsonify-error");
@@ -95,12 +115,14 @@ var jsonifyError = require("jsonify-error");
 somethingAsync().then(() => {
     // ...
 }).catch(error => {
-    console.error(jsonifyError(e));
+    jsonifyError.log(e);
     // process.exit(1); // Exiting or not depends on your situation
 });
 ```
 
-# Example usage: with express
+Also, for promises, there is a sibling module called **[better-promise-error-log][better-promise-error-log]** which takes care of showing the improved logs automatically for unhandled rejections.
+
+## Example: with express
 
 ```javascript
 var jsonifyError = require("jsonify-error");
@@ -112,17 +134,15 @@ app.get('/your/api', (req, res) => {
 });
 ```
 
-# Example usage: overriding console
+## Example usage: overriding methods
 
 ```javascript
-require("jsonify-error").overrideConsole();
-// Now console.log, console.warn and console.error automatically
-// call jsonifyError() on each argument that is instanceof Error
-// before logging. Note that overriding native functions/objects
-// is usually not a good practice so use this with caution.
+const jsonifyError = require("jsonify-error");
+jsonifyError.overrideConsole();
+jsonifyError.overrideErrorMethods();
+// Now `console.log`, `console.warn` and `console.error` will be much better.
+// Also, `e.toString()` will be much better and `e.toJSON()` will be available.
 ```
-
-*Note:* since 1.2.0, you can simply `console.log(jsonifyError(anything))` if you prefer, because if `anything` is not an error, `jsonifyError` will not touch it at all.
 
 # Contributing
 
@@ -138,6 +158,7 @@ MIT (c) Pedro Augusto de Paula Barbosa
 
 [npm-url]: https://npmjs.org/package/jsonify-error
 [npm-version-badge]: https://badgen.net/npm/v/jsonify-error
+[build-status-badge]: https://badgen.net/travis/papb/papb-js-snippets
 [dependency-status-badge]: https://badgen.net/david/dep/papb/jsonify-error
 [dev-dependency-status-badge]: https://badgen.net/david/dev/papb/jsonify-error
 [npm-downloads-badge]: https://badgen.net/npm/dt/jsonify-error
@@ -148,4 +169,5 @@ MIT (c) Pedro Augusto de Paula Barbosa
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/jsonify-error/badge?style=rounded
 
 [license-url]: LICENSE
+[travis-url]: https://travis-ci.com/papb/jsonify-error
 [better-promise-error-log]: https://npmjs.org/package/better-promise-error-log
