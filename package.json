@@ -1,6 +1,6 @@
 {
   "name": "jsonify-error",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Convert errors to JSON or to a good string. Develop faster with better error messages.",
   "main": "index.js",
   "browser": {
