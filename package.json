@@ -3,6 +3,9 @@
   "version": "1.3.1",
   "description": "Get a plain object fully representing the error for better logs and server responses.",
   "main": "index.js",
+  "browser": {
+    "./lib/log.js": "./lib/browser-specific/log.js"
+  },
   "jsdelivr": "dist/jsonify-error.js",
   "repository": {
     "type": "git",
@@ -69,5 +72,8 @@
   "bugs": {
     "url": "https://github.com/papb/jsonify-error/issues"
   },
-  "homepage": "https://github.com/papb/jsonify-error#readme"
+  "homepage": "https://github.com/papb/jsonify-error#readme",
+  "dependencies": {
+    "chalk": "^2.4.1"
+  }
 }

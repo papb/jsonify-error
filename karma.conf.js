@@ -12,6 +12,9 @@ module.exports = function(config) {
             "browser-entrypoint.js",
             "test/browser/**/*.js"
         ],
+        exclude: [
+            "lib/**/log.js",
+        ],
         preprocessors: {
             "lib/**/*.js": [ "browserify" ],
             "browser-entrypoint.js": [ "browserify" ],
