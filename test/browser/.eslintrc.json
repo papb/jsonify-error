@@ -1,0 +1,12 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true,
+        "mocha": true
+    },
+    "plugins": ["mocha"],
+    "extends": ["eslint:recommended", "plugin:mocha/recommended"],
+    "rules": {
+        "node/no-unsupported-features/es-syntax": "off"
+    }
+}

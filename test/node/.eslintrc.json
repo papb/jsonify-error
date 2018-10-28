@@ -1,0 +1,8 @@
+{
+    "env": {
+        "es6": true,
+        "mocha": true
+    },
+    "plugins": ["mocha"],
+    "extends": ["eslint:recommended", "plugin:mocha/recommended"]
+}
