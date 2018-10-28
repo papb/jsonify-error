@@ -1,0 +1,13 @@
+language: node_js
+
+jobs:
+  include:
+    - stage: test
+      name: 'Unit Tests on Node 6'
+      node_js: '6'
+    - stage: test
+      name: 'Unit Tests on Node 8'
+      node_js: '8'
+    - stage: test
+      name: 'Unit Tests on Node 10'
+      node_js: '10'
