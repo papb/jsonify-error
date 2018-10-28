@@ -9,7 +9,6 @@
     "url": "git+https://github.com/papb/jsonify-error.git"
   },
   "scripts": {
-    "build-dev-es6-watch": "watchify browser-entrypoint.js --outfile=\"dist/jsonify-error.js\" --verbose --debug",
     "build-dev-es6": "browserify --debug browser-entrypoint.js -o dist/jsonify-error.js",
     "build-es6": "npm run build-dev-es6 && uglifyjs dist/jsonify-error.js --compress --mangle --source-map -o dist/jsonify-error.min.js",
     "build-dev-es5": "browserify --debug browser-entrypoint.js -o dist/jsonify-error.es5.js -t [ babelify --presets [ \"babel-preset-env\" ] ]",
@@ -62,8 +61,7 @@
     "nyc": "^13.1.0",
     "puppeteer": "^1.7.0",
     "sha.js": "^2.4.11",
-    "uglify-es": "^3.3.9",
-    "watchify": "^3.11.0"
+    "uglify-es": "^3.3.9"
   },
   "engines": {
     "node": ">=6"
