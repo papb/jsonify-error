@@ -45,7 +45,7 @@ But **jsonify-error** comes to the rescue:
 For browsers, simply include one of the dists in your entry point, such as `dist/jsonify-error.js`. The dists are available in [jsDelivr](https://cdn.jsdelivr.net/npm/jsonify-error/):
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/jsonify-error@1.3.0/dist/jsonify-error.js" integrity="sha384-IlFtQEeOfO1Uw6QCHwhpQFXZE7CghDHsPkCgjjHiMZmzEYBNQV3UmBpfulfxC/QJ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsonify-error@1.4.1/dist/jsonify-error.js" integrity="sha384-9Ni+25jkkXj+pXOvuHydIUaYOKpW7XBquZJ0/JV+u0Nf9fJ1oqSjku2/m4aFBw53" crossorigin="anonymous"></script>
 ```
 
 The following dists are available (with source maps):
