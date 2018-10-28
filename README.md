@@ -25,10 +25,18 @@ It's 2018 and still the default behavior of JavaScript could be better with rega
 
 But **jsonify-error** comes to the rescue:
 
-* For `console.log(e)`: Use `jsonifyError.log(e)` instead (or call `jsonifyError.overrideConsole()` once and then `console.log(e)` will work too).
-* For `JSON.stringify(e)`: Use `JSON.stringify(jsonifyError(e))` instead (or call `jsonifyError.overrideErrorMethods()` once and then of `JSON.stringify(e)` will work too).
-* For `e.toString()`: Call `jsonifyError.overrideErrorMethods()` once and `e.toString()` will work.
-* For `e.toJSON()`: Use `jsonifyError(e)` instead (or call `jsonifyError.overrideErrorMethods()` once and `e.toJSON()` will work).
+* For `console.log(e)`:
+    * Use `jsonifyError.log(e)` instead
+    * Or call `jsonifyError.overrideConsole()` once and then `console.log(e)` will work.
+* For `JSON.stringify(e)`:
+    * Use `JSON.stringify(jsonifyError(e))` instead
+    * Or call `jsonifyError.overrideErrorMethods()` once and then of `JSON.stringify(e)` will work.
+* For `e.toString()`:
+    * Use `jsonifyError.asString(e)` instead
+    * Or call `jsonifyError.overrideErrorMethods()` once and then `e.toString()` will work.
+* For `e.toJSON()`:
+    * Use `jsonifyError(e)` instead
+    * Or call `jsonifyError.overrideErrorMethods()` once and then `e.toJSON()` will work.
 
 # Installation
 
@@ -47,7 +55,7 @@ The following dists are available (with source maps):
 * `dist/jsonify-error.es5.js`
 * `dist/jsonify-error.es5.min.js`
 
-Or if you're developing a browser library with Browserify, you can just `require("jsonify-error")` normally.
+Or if you're developing a browser library with Browserify, you can just require it normally, as if you were in a Node environment.
 
 ## In Node
 
