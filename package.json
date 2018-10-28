@@ -12,17 +12,17 @@
     "url": "git+https://github.com/papb/jsonify-error.git"
   },
   "scripts": {
-    "build-dev-es6": "browserify --debug browser-entrypoint.js -o dist/jsonify-error.js",
-    "build-es6": "npm run build-dev-es6 && uglifyjs dist/jsonify-error.js --compress --mangle --source-map -o dist/jsonify-error.min.js",
-    "build-dev-es5": "browserify --debug browser-entrypoint.js -o dist/jsonify-error.es5.js -t [ babelify --presets [ \"babel-preset-env\" ] ]",
-    "build-es5": "npm run build-dev-es5 && uglifyjs dist/jsonify-error.es5.js --compress --mangle --source-map -o dist/jsonify-error.es5.min.js",
-    "build": "npm run build-es6 && npm run build-es5 && npm run crlf",
-    "crlf": "node helpers/ensure-crlf.js",
-    "sri": "node helpers/sri-sha384.js",
-    "test": "npm run lint && npm run test:node && npm run test:browser",
-    "test:browser": "karma start",
+    "build:es6": "browserify --debug browser-entrypoint.js -o dist/jsonify-error.js",
+    "build:es6-min": "uglifyjs dist/jsonify-error.js --compress --mangle --source-map -o dist/jsonify-error.min.js",
+    "build:es5": "browserify --debug browser-entrypoint.js -o dist/jsonify-error.es5.js -t [ babelify --presets [ \"babel-preset-env\" ] ]",
+    "build:es5-min": "uglifyjs dist/jsonify-error.es5.js --compress --mangle --source-map -o dist/jsonify-error.es5.min.js",
+    "build:crlf": "node helpers/ensure-crlf.js",
+    "build": "run-s build:*",
+    "test": "run-s build test:*",
+    "test:lint": "eslint .",
     "test:node": "nyc --all --reporter=text --reporter=text-summary --reporter=html mocha \"test/node/**/*.js\"",
-    "lint": "eslint ."
+    "test:browser": "karma start",
+    "sri": "node helpers/sri-sha384.js"
   },
   "files": [
     "browser-entrypoint.js",
@@ -61,6 +61,7 @@
     "karma-coverage": "^1.1.2",
     "karma-mocha": "^1.3.0",
     "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.3",
     "nyc": "^13.1.0",
     "puppeteer": "^1.7.0",
     "sha.js": "^2.4.11",
