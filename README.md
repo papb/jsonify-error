@@ -5,6 +5,7 @@ jsonify-error
 
 [![NPM version][npm-version-badge]][npm-url]
 [![Build status][build-status-badge]][travis-url]
+[![Minzipped size][minzipped-size-badge]][bundlephobia-url]
 [![License][license-badge]][license-url]
 [![NPM downloads][npm-downloads-badge]][npm-url]
 [![Dependency Status][dependency-status-badge]](https://david-dm.org/papb/jsonify-error)
@@ -167,6 +168,7 @@ MIT (c) Pedro Augusto de Paula Barbosa
 [npm-url]: https://npmjs.org/package/jsonify-error
 [npm-version-badge]: https://badgen.net/npm/v/jsonify-error
 [build-status-badge]: https://badgen.net/travis/papb/papb-js-snippets
+[minzipped-size-badge]: https://badgen.net/bundlephobia/minzip/jsonify-error
 [dependency-status-badge]: https://badgen.net/david/dep/papb/jsonify-error
 [dev-dependency-status-badge]: https://badgen.net/david/dev/papb/jsonify-error
 [npm-downloads-badge]: https://badgen.net/npm/dt/jsonify-error
@@ -178,4 +180,5 @@ MIT (c) Pedro Augusto de Paula Barbosa
 
 [license-url]: LICENSE
 [travis-url]: https://travis-ci.com/papb/jsonify-error
+[bundlephobia-url]: https://bundlephobia.com/result?p=jsonify-error
 [better-promise-error-log]: https://npmjs.org/package/better-promise-error-log
