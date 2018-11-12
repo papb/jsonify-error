@@ -112,20 +112,20 @@ try {
     // ...
 } catch (e) {
     jsonifyError.log(e);
-    process.exit(1);
+    // ...
 }
 ```
 
 ## Example: with promises
 
 ```javascript
-var jsonifyError = require("jsonify-error");
+const jsonifyError = require("jsonify-error");
 
 somethingAsync().then(() => {
     // ...
 }).catch(error => {
     jsonifyError.log(e);
-    // process.exit(1); // Exiting or not depends on your situation
+    // ...
 });
 ```
 
@@ -142,6 +142,8 @@ app.get('/your/api', (req, res) => {
     res.status(500).json(jsonifyError(error));
 });
 ```
+
+Note: if you've overriden error methods (by calling `jsonifyError.overrideErrorMethods()`), the above can be simplified to `res.status(500).json(error)` (see the *overriding methods* section).
 
 ## Example usage: overriding methods
 
