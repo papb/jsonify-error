@@ -13,7 +13,8 @@ module.exports = function(config) {
             "test/browser/**/*.js"
         ],
         exclude: [
-            "lib/**/log.js",
+            "lib/log.js",
+            "lib/map-arg.js"
         ],
         preprocessors: {
             "lib/**/*.js": [ "browserify" ],

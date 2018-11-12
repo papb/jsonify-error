@@ -4,7 +4,8 @@
   "description": "Convert errors to JSON or to a good string. Develop faster with better error messages.",
   "main": "index.js",
   "browser": {
-    "./lib/log.js": "./lib/browser-specific/log.js"
+    "./lib/log.js": "./lib/browser-specific/log.js",
+    "./lib/map-arg.js": "./lib/browser-specific/map-arg.js"
   },
   "jsdelivr": "dist/jsonify-error.js",
   "repository": {
