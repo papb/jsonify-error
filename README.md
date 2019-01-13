@@ -31,7 +31,7 @@ But **jsonify-error** comes to the rescue:
     * Or call `jsonifyError.overrideConsole()` once and then `console.log(e)` will work.
 * For `JSON.stringify(e)`:
     * Use `JSON.stringify(jsonifyError(e))` instead
-    * Or call `jsonifyError.overrideErrorMethods()` once and then of `JSON.stringify(e)` will work.
+    * Or call `jsonifyError.overrideErrorMethods()` once and then `JSON.stringify(e)` will work.
 * For `e.toString()`:
     * Use `jsonifyError.asString(e)` instead
     * Or call `jsonifyError.overrideErrorMethods()` once and then `e.toString()` will work.
