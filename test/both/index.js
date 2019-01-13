@@ -17,6 +17,21 @@ module.exports = ({ jsonifyError, it, expect }) => function() {
         expect(jsonified.stack[0]).to.equal("Error: Some message");
     });
 
+    it('should find enumerable fields correctly', function() {
+        const ErrorSubclass1 = class ErrorSubclass1 extends Error {};
+        const ErrorSubclass2 = class ErrorSubclass2 extends ErrorSubclass1 {};
+        ErrorSubclass2.prototype.someFieldX = 333;
+        ErrorSubclass1.prototype.someFieldY = 555;
+        const e = new ErrorSubclass2("Some message");
+        e.someFieldZ = 777;
+        const jsonified = jsonifyError(e);
+        expect(jsonified.enumerableFields).to.deep.equal({
+            someFieldX: 333,
+            someFieldY: 555,
+            someFieldZ: 777
+        });
+    });
+
     it('should override error methods correctly', function() {
         const ErrorSubclass = class ErrorSubclass extends Error {};
         const e = new ErrorSubclass("Some message");
