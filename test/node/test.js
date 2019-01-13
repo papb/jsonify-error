@@ -2,43 +2,20 @@
 
 const chai = require('chai');
 const expect = chai.expect;
+const testsForBoth = require('./../both');
 
 const jsonifyError = require("./../../index");
 
 describe('jsonifyError', function() {
 
-    it('should wrap correctly', function() {
-        const ErrorSubclass = class ErrorSubclass extends Error {};
-        const e = new ErrorSubclass("Some message");
-        const jsonified = jsonifyError(e);
-        expect(jsonified).to.deep.include({
-            name: "Error",
-            className: "ErrorSubclass",
-            message: "Some message",
-            superclasses: ["Error", "Object"],
-            enumerableFields: {}
-        });
-        expect(jsonified.stack).to.be.an("array");
-        expect(jsonified.stack[0]).to.equal("Error: Some message");
-    });
+    // describe('specifically for node', function() {
+    // 
+    // });
 
-    it('should override error methods correctly', function() {
-        const ErrorSubclass = class ErrorSubclass extends Error {};
-        const e = new ErrorSubclass("Some message");
-        jsonifyError.overrideErrorMethods();
-
-        const jsonified = e.toJSON();
-        expect(jsonified).to.deep.include({
-            name: "Error",
-            className: "ErrorSubclass",
-            message: "Some message",
-            superclasses: ["Error", "Object"],
-            enumerableFields: {}
-        });
-        expect(jsonified.stack).to.be.an("array");
-        expect(jsonified.stack[0]).to.equal("Error: Some message");
-        
-        expect(e.toString(7)).to.match(/^ErrorSubclass: Some message {\n {7}"name": "Error"/);
-    });
+    describe('for both node and browser', testsForBoth({
+        jsonifyError,
+        it,
+        expect
+    }));
 
 });
