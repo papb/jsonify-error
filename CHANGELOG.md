@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- ## [Unreleased] -->
 
+## [1.4.4] - 2019-02-11
+### Changed
+- Improved README
+
 ## [1.4.3] - 2019-01-13
 ### Added
 - Added another test
@@ -81,7 +85,8 @@ Note: 1.1.0 was skipped because of a mistake.
 
 - Initial version.
 
-[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.4.3...HEAD
+[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.4.4...HEAD
+[1.4.4]: https://github.com/papb/jsonify-error/compare/v1.4.3...v1.4.4
 [1.4.3]: https://github.com/papb/jsonify-error/compare/v1.4.2...v1.4.3
 [1.4.2]: https://github.com/papb/jsonify-error/compare/v1.4.1...v1.4.2
 [1.4.1]: https://github.com/papb/jsonify-error/compare/v1.4.0...v1.4.1
