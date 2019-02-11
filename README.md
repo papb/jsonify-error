@@ -17,18 +17,15 @@ jsonify-error
 
 Convert errors to JSON or to a good string. Develop faster with better error messages.
 
-It's 2018 and still the default behavior of JavaScript could be better with regard to displaying errors:
+It's 2019 and still the default behavior of JavaScript could be better with regard to displaying/manipulating errors:
 
-* `console.log(e)`: Bad
 * `JSON.stringify(e)`: Bad
 * `e.toString()`: Bad
 * `e.toJSON()`: Doesn't exist
+* `console.log(e)`: Bad in browsers, not so bad in Node but could be better
 
 But **jsonify-error** comes to the rescue:
 
-* For `console.log(e)`:
-    * Use `jsonifyError.log(e)` instead
-    * Or call `jsonifyError.overrideConsole()` once and then `console.log(e)` will work.
 * For `JSON.stringify(e)`:
     * Use `JSON.stringify(jsonifyError(e))` instead
     * Or call `jsonifyError.overrideErrorMethods()` once and then `JSON.stringify(e)` will work.
@@ -38,6 +35,9 @@ But **jsonify-error** comes to the rescue:
 * For `e.toJSON()`:
     * Use `jsonifyError(e)` instead
     * Or call `jsonifyError.overrideErrorMethods()` once and then `e.toJSON()` will work.
+* For `console.log(e)`:
+    * Use `jsonifyError.log(e)` instead
+    * Or call `jsonifyError.overrideConsole()` once and then `console.log(e)` will work.
 
 # Installation
 
@@ -96,7 +96,7 @@ The main purpose of **jsonify-error**, as the name suggests, is to convert an er
 }
 ```
 
-If you're thinking *"Great! Now I can do `console.log(jsonifyError(e))` instead of `console.log(e)`"*, you're in the right track, but you can do even better!
+If you're thinking *"Great! Now I can do `console.log(jsonifyError(e))` instead of `console.log(e)`" in a browser*, you're in the right track, but you can do even better!
 A few utility methods are exposed by **jsonifyError** beyond the main one, as mentioned in the beginning of this README. 
 
 * `jsonifyError.log(e)`: Logs the error in a much better way than `console.log(e)`.
