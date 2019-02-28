@@ -169,7 +169,7 @@ MIT (c) Pedro Augusto de Paula Barbosa
 
 [npm-url]: https://npmjs.org/package/jsonify-error
 [npm-version-badge]: https://badgen.net/npm/v/jsonify-error
-[build-status-badge]: https://badgen.net/travis/papb/papb-js-snippets
+[build-status-badge]: https://badgen.net/travis/papb/jsonify-error
 [minzipped-size-badge]: https://badgen.net/bundlephobia/minzip/jsonify-error
 [dependency-status-badge]: https://badgen.net/david/dep/papb/jsonify-error
 [dev-dependency-status-badge]: https://badgen.net/david/dev/papb/jsonify-error
