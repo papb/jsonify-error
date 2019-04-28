@@ -17,7 +17,7 @@
     "build:es6-min": "uglifyjs dist/jsonify-error.js --compress --mangle --source-map -o dist/jsonify-error.min.js",
     "build:es5": "browserify --debug browser-entrypoint.js -o dist/jsonify-error.es5.js -t [ babelify --presets [ \"babel-preset-env\" ] ]",
     "build:es5-min": "uglifyjs dist/jsonify-error.es5.js --compress --mangle --source-map -o dist/jsonify-error.es5.min.js",
-    "build:crlf": "node helpers/ensure-crlf.js",
+    "build:lf": "node helpers/ensure-lf.js",
     "build": "run-s build:*",
     "test": "run-s build test:*",
     "test:lint": "eslint .",
