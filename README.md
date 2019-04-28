@@ -66,7 +66,7 @@ In node, as usual, simply do:
 npm install --save jsonify-error
 ```
 
-# What it does
+# Purpose
 
 The main purpose of **jsonify-error**, as the name suggests, is to convert an error to a plain object. Just do `jsonifyError(e)` and you will get something like:
 
