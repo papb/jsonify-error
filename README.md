@@ -129,7 +129,7 @@ somethingAsync().then(() => {
 });
 ```
 
-Also, for promises, there is a sibling module called **[better-promise-error-log][better-promise-error-log]** which takes care of showing the improved logs automatically for unhandled rejections.
+Also, for promises, there is a sibling module called **[better-promise-error-log]** which takes care of showing the improved logs automatically for unhandled rejections.
 
 ## Example: with express
 
@@ -162,6 +162,10 @@ Any contribution is very welcome. Feel free to open an issue about anything: que
 # Changelog
 
 The changelog is available in [CHANGELOG.md](CHANGELOG.md).
+
+# See also
+
+* [better-promise-error-log]
 
 # License
 
