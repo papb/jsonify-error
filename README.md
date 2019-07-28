@@ -49,7 +49,7 @@ For browsers, simply include one of the dists in your entry point, such as `dist
 <script src="https://cdn.jsdelivr.net/npm/jsonify-error@2.0.0/dist/jsonify-error.min.js" integrity="sha384-k3Is8aV5PW6XO2NtZyFbjgZLKNWv4kFrtuN0cnOhaw+qKurzZIlOZZNmih+HGKpN" crossorigin="anonymous"></script>
 ```
 
-They are also available as [GitHub release assets](https://github.com/papb/jsonify-error/releases/tag/2.0.0) (since 2.0.0). The following formats are available (with source maps):
+They are also available as [GitHub release assets](https://github.com/papb/jsonify-error/releases/tag/2.0.0) (since 1.4.2). The following formats are available (with source maps):
 
 * `jsonify-error.js`
 * `jsonify-error.min.js` (minified)
