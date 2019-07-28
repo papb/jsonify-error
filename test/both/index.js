@@ -51,4 +51,17 @@ module.exports = ({ jsonifyError, it, expect }) => function() {
         expect(e.toString(7)).to.match(/^ErrorSubclass: Some message {\n {7}"name": "Error"/);
     });
 
+    it('should strip colors correctly', function() {
+        const chalk = require("chalk");
+        const ErrorSubclass = class ErrorSubclass extends Error {};
+        const e = new ErrorSubclass("Some message");
+        e.someField = chalk.red("Red message");
+        jsonifyError.overrideErrorMethods();
+
+        const jsonified = e.toJSON();
+        expect(jsonified.enumerableFields).to.deep.include({
+            someField: "Red message"
+        });
+    });
+
 };
