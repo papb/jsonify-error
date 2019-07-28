@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!-- ## [Unreleased] -->
 
+## [2.0.0] - 2019-07-27
+### Changed
+- Strip color control characters from strings ([#8](https://github.com/papb/jsonify-error/issues/8))
+
+    _**Note:** This was marked as a breaking change just to be safe. Someone might be doing tests comparing the output of jsonifyError directly, and something could break. But I guess 99.999% of the users can just upgrade._
+
 ## [1.4.5] - 2019-04-28
 ### Fixed
 - Handle circular references gracefully instead of crashing ([#7](https://github.com/papb/jsonify-error/pull/7)) (Thanks @agentofuser)
@@ -91,7 +97,8 @@ Note: 1.1.0 was skipped because of a mistake.
 
 - Initial version.
 
-[Unreleased]: https://github.com/papb/jsonify-error/compare/v1.4.5...HEAD
+[Unreleased]: https://github.com/papb/jsonify-error/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/papb/jsonify-error/compare/v1.4.5...v2.0.0
 [1.4.5]: https://github.com/papb/jsonify-error/compare/v1.4.4...v1.4.5
 [1.4.4]: https://github.com/papb/jsonify-error/compare/v1.4.3...v1.4.4
 [1.4.3]: https://github.com/papb/jsonify-error/compare/v1.4.2...v1.4.3
