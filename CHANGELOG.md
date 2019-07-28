@@ -97,18 +97,18 @@ Note: 1.1.0 was skipped because of a mistake.
 
 - Initial version.
 
-[Unreleased]: https://github.com/papb/jsonify-error/compare/v2.0.0...HEAD
-[2.0.0]: https://github.com/papb/jsonify-error/compare/v1.4.5...v2.0.0
-[1.4.5]: https://github.com/papb/jsonify-error/compare/v1.4.4...v1.4.5
-[1.4.4]: https://github.com/papb/jsonify-error/compare/v1.4.3...v1.4.4
-[1.4.3]: https://github.com/papb/jsonify-error/compare/v1.4.2...v1.4.3
-[1.4.2]: https://github.com/papb/jsonify-error/compare/v1.4.1...v1.4.2
-[1.4.1]: https://github.com/papb/jsonify-error/compare/v1.4.0...v1.4.1
-[1.4.0]: https://github.com/papb/jsonify-error/compare/v1.3.1...v1.4.0
-[1.3.1]: https://github.com/papb/jsonify-error/compare/v1.3.0...v1.3.1
-[1.3.0]: https://github.com/papb/jsonify-error/compare/v1.2.2...v1.3.0
-[1.2.2]: https://github.com/papb/jsonify-error/compare/v1.2.1...v1.2.2
-[1.2.1]: https://github.com/papb/jsonify-error/compare/v1.2.0...v1.2.1
-[1.2.0]: https://github.com/papb/jsonify-error/compare/v1.1.2...v1.2.0
-[1.1.2]: https://github.com/papb/jsonify-error/compare/v1.1.1...v1.1.2
-[1.1.1]: https://github.com/papb/jsonify-error/compare/v1.0.0...v1.1.1
+[Unreleased]: https://github.com/papb/jsonify-error/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/papb/jsonify-error/compare/1.4.5...2.0.0
+[1.4.5]: https://github.com/papb/jsonify-error/compare/1.4.4...1.4.5
+[1.4.4]: https://github.com/papb/jsonify-error/compare/1.4.3...1.4.4
+[1.4.3]: https://github.com/papb/jsonify-error/compare/1.4.2...1.4.3
+[1.4.2]: https://github.com/papb/jsonify-error/compare/1.4.1...1.4.2
+[1.4.1]: https://github.com/papb/jsonify-error/compare/1.4.0...1.4.1
+[1.4.0]: https://github.com/papb/jsonify-error/compare/1.3.1...1.4.0
+[1.3.1]: https://github.com/papb/jsonify-error/compare/1.3.0...1.3.1
+[1.3.0]: https://github.com/papb/jsonify-error/compare/1.2.2...1.3.0
+[1.2.2]: https://github.com/papb/jsonify-error/compare/1.2.1...1.2.2
+[1.2.1]: https://github.com/papb/jsonify-error/compare/1.2.0...1.2.1
+[1.2.0]: https://github.com/papb/jsonify-error/compare/1.1.2...1.2.0
+[1.1.2]: https://github.com/papb/jsonify-error/compare/1.1.1...1.1.2
+[1.1.1]: https://github.com/papb/jsonify-error/compare/1.0.0...1.1.1
