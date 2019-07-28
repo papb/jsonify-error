@@ -49,12 +49,12 @@ For browsers, simply include one of the dists in your entry point, such as `dist
 <script src="https://cdn.jsdelivr.net/npm/jsonify-error@2.0.0/dist/jsonify-error.min.js" integrity="sha384-k3Is8aV5PW6XO2NtZyFbjgZLKNWv4kFrtuN0cnOhaw+qKurzZIlOZZNmih+HGKpN" crossorigin="anonymous"></script>
 ```
 
-The following dists are available (with source maps):
+They are also available as [GitHub release assets](https://github.com/papb/jsonify-error/releases/tag/2.0.0) (since 2.0.0). The following formats are available (with source maps):
 
-* `dist/jsonify-error.js`
-* `dist/jsonify-error.min.js`
-* `dist/jsonify-error.es5.js`
-* `dist/jsonify-error.es5.min.js`
+* `jsonify-error.js`
+* `jsonify-error.min.js` (minified)
+* `jsonify-error.es5.js` (ES5 compatible)
+* `jsonify-error.es5.min.js` (ES5 compatible, minified)
 
 Or if you're developing a browser library with Browserify, you can just require it normally, as if you were in a Node environment.
 
